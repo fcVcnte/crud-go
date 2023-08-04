@@ -15,8 +15,7 @@ func main() {
 	}
 
 	router := gin.Default()
-
-	router.InitRoutes(&router.RouterGroup)
+	routes.InitRoutes(&router.RouterGroup)
 
 	if err := router.Run("8080"); err != nil {
 		log.Fatal("Error loading .env file")
